@@ -23,12 +23,11 @@ import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 
 public class Intro_Activity extends AppCompatActivity {
-    Button search;
+   /* Button search;
     TextView username;
     private static final int RC_SIGN_IN = 1;
     private GoogleApiClient googleApiClient;
-    private GoogleSignInOptions gso;
-
+    private GoogleSignInOptions gso;*/
 
 
     @Override
@@ -36,7 +35,7 @@ public class Intro_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        username=findViewById(R.id.username);
+       /* username=findViewById(R.id.username);
         search=findViewById(R.id.btn_search);
 
 
@@ -84,5 +83,6 @@ public class Intro_Activity extends AppCompatActivity {
     private void gotoProfile(){
         Intent intent=new Intent(Intro_Activity.this,BookDetails.class);
         startActivity(intent);
+    }*/
     }
 }
