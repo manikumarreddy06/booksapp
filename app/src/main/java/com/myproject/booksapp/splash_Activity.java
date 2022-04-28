@@ -37,7 +37,7 @@ public class splash_Activity extends AppCompatActivity {
             @Override
             public void run() {
 
-                startActivity(new Intent(getApplicationContext(),Intro_Activity.class));
+                startActivity(new Intent(getApplicationContext(),Signin_Activity.class));
                 finish();
             }
         },3500);

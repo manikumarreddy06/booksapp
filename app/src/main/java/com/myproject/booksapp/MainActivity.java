@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         //after extracting all the data we are saving this data in our modal class.
                        BooksInfo booksInfo=new BooksInfo(title,subtitle,authorsArrayList,publisher,publishedDate,description,imageLinks);
-                        //beloe line is use to pass our modal class in our array list.
+                        //below line is use to pass our modal class in our array list.
                         bookInfoArrayList.add(booksInfo);
                         //below line is use to pass our array list in adapter class.
                         BooksAdapter adapter = new BooksAdapter(bookInfoArrayList, MainActivity.this);

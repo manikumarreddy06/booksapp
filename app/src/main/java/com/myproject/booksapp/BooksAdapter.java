@@ -42,6 +42,8 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHold
         BooksInfo booksInfo=bookInfoArrayList.get(position);
     holder.nameTV.setText(booksInfo.getTitle());
     holder.publisherTV.setText(booksInfo.getPublisher());
+        String il= temp.getThumbnail();
+        Picasso.get().load(il).into(holder.bookIV);
 
   holder.itemView.setOnClickListener(new View.OnClickListener() {
     @Override

@@ -14,18 +14,21 @@ public class BookDetails extends AppCompatActivity {
 
     private ArrayList<String> authors;
     TextView titleTV, subtitleTV, publisherTV, publisheddate,description ,thumbnail;
-    private Object ImageView;
+    private ImageView bookIV;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_details);
-       ImageView=findViewById(R.id.idIVbook);
+        bookIV=findViewById(R.id.idIVbook);
        titleTV=findViewById(R.id.idTVTitle);
        subtitleTV=findViewById(R.id.idTVSubTitle);
        publisherTV=findViewById(R.id.idTVpublisher);
        publisheddate=findViewById(R.id.idTVPublishDate);
        description=findViewById(R.id.idTVDescription);
+       String il=getIntent().getStringExtra("bookimage");
+
 
 
        titleTV.setText(getIntent().getStringExtra("booktitle"));
@@ -33,6 +36,8 @@ public class BookDetails extends AppCompatActivity {
        publisherTV.setText(getIntent().getStringExtra("bookpublisher"));
        publisheddate.setText(getIntent().getStringExtra("bookpublisheddate"));
        description.setText(getIntent().getStringExtra("bookdes"));
+
+Picasso.get().load(il).into(bookIV);
 
 
 

@@ -1,6 +1,7 @@
 package com.myproject.booksapp;
 
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class BooksInfo {
     private String publishedDate;
     private String description;
     private String thumbnail;
+;
 
 
 
@@ -81,9 +83,19 @@ public class BooksInfo {
         this.publisher = publisher;
         this.publishedDate = publishedDate;
         this.description = description;
+        try {
+            this.thumbnail= imageLinks.getString("thumbnail");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
-}
+
+
+
+    }
+
+
 
 
 
